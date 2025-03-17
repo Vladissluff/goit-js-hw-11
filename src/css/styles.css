@@ -7,38 +7,43 @@
 /* Common styles */
 @import url('./reset.css');
 @import url('./base.css');
-
 body {
+  font-family: Arial, sans-serif;
   text-align: center;
 }
+
 .form {
   margin: 20px;
 }
-.gallery {
-  list-style: none;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 16px;
+
+.loader {
+  display: block;
+  margin: 10px auto;
+  font-size: 18px;
+  color: #007bff;
 }
-.gallery-item {
-  border: 1px solid #ddd;
-  padding: 10px;
-  border-radius: 8px;
-}
+
 .hidden {
   display: none;
 }
-.loader {
-  border: 5px solid #f3f3f3;
-  border-top: 5px solid #3498db;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  animation: spin 1s linear infinite;
-  margin: 20px auto;
+
+.gallery {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
 }
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+
+.gallery-item {
+  width: 200px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
 }
